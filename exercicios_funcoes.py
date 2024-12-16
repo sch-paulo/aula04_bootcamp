@@ -9,7 +9,7 @@ print()
 
 # 17. Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
 def verificar_numero_primo(num: int) -> bool:
-    if num < 1:
+    if num < 2:
         return False
     for i in range(2, num):
         if num % i == 0:
@@ -48,34 +48,3 @@ def ordenar_chaves_dicionario(d: dict) -> list:
     return sorted(d.keys())
 dicionario = {"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0}
 print(ordenar_chaves_dicionario(dicionario))
-
-def eh_primo(numero):
-    if numero < 2:
-        return False
-    for i in range(2, int(numero ** 0.5) + 1):
-        if numero % i == 0:
-            return False
-    return True
-
-# Testes para função 1
-assert calcular_soma([1, 2, 3, 4, 5]) == 15
-assert calcular_soma([]) == 0
-assert calcular_soma([-1, 1]) == 0
-
-# Testes para função 2
-assert eh_primo(1) == True
-assert eh_primo(4) == False
-assert eh_primo(17) == True
-
-# Testes para função 3
-assert inverter_string("python") == "nohtyp"
-assert inverter_string("") == ""
-assert inverter_string("a") == "a"
-
-# Testes para função 4
-assert combinacao_de_pares([1, 2, 3, 4, 5], 7) == [(2, 5), (3, 4)]
-assert combinacao_de_pares([1, 2, 3], 10) == []
-
-# Testes para função 5
-assert ordenar_chaves_dicionario({'c': 3, 'a': 1, 'b': 2}) == ['a', 'b', 'c']
-assert ordenar_chaves_dicionario({}) == []
